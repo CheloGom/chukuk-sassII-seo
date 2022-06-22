@@ -1,0 +1,455 @@
+//variables
+@import "utilities/variables";
+@import "utilities/extend";
+@import "utilities/mixins";
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* Home*/
+.home{
+    @extend %body;
+    .headerHome{
+        @include headers;
+    h1{  
+        @include titulos;
+        }
+    }
+
+    .row{
+        .navbar{
+            background-color: $color-complementario;
+        }
+        div{
+            .navbar-nav{
+                .nav-item{
+                    .nav-link{
+                        color: white;
+                    }
+                }
+            }
+        }
+    }
+
+    .mainHome{
+        margin-top: 200px;
+        margin-bottom: 200px;
+        display: grid;
+        justify-content: center;
+        grid-template-areas:"tituloMain tituloMain"
+                            "parrafo parrafo";
+        .tituloMain{
+            margin-top: 3rem;
+            grid-area: tituloMain;
+            text-align: center;
+        }
+        div{
+            .parrafo{
+                grid-area: parrafo;
+                margin: 1rem;
+                padding: 1rem;
+                text-align: center;
+                font-size: 1.5rem;
+            }
+        }  
+        .imagenHome{
+            grid-area: imagen;
+            display: none;
+            justify-content: center;
+            align-items: center;
+        }                 
+    }
+
+
+    .footerHome{
+        text-align: center;
+        background-color: $color-complementario2;
+    }
+    @media screen and (min-width:600px) {
+        .mainHome{
+            margin-top: 50px;
+            margin-bottom: 400px;
+            grid-template-areas:"tituloMain tituloMain tituloMain"
+                                "parrafo parrafo parrafo"
+                                "imagen imagen imagen";
+            justify-content: center;
+            justify-items: center;
+            .imagenHome{
+                display: block;
+            }
+        }
+    
+    }
+    
+    
+    @media screen and (min-width:1024px){
+        
+        .mainHome{
+            margin-top: 50px;
+            margin-bottom: 400px;
+            grid-template-areas:"tituloMain tituloMain tituloMain tituloMain"
+                                "parrafo parrafo parrafo parrafo"
+                                "imagen imagen imagen imagen";
+            justify-items: center;
+            align-items: center;
+            }
+    }
+}
+
+/* campañas*/
+
+.campanias{
+    @extend %body;
+    header{
+        @include headers;
+        h1{  
+            @include titulos;
+            }
+    }    
+    .row{
+        .navbar{
+            background-color: $color-complementario;
+        }
+        div{
+            .navbar-nav{
+                .nav-item{
+                    .nav-link{
+                        color: white;
+                    }
+                }
+            }
+        }
+    }
+    .mainCampanias{
+        margin-top: 100px;
+        margin-bottom: 200px;
+        display: grid;
+        justify-content: center;
+        grid-template-areas:"info info";
+        .info{
+            margin: 1rem;
+            padding: 1rem;
+            grid-area: info;
+        }
+        .subCampanias{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            text-align: center;
+            text-decoration: underline;
+        }
+        h3{
+            margin: 1rem;
+            text-align: center;
+        }
+        .pCampanias{
+            text-align: center;
+            font-size: 1.5rem;
+        }
+        .listaCampanias{
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            text-align: center;
+            display: none;
+        }
+    }
+    .footerCampanias{
+        text-align: center;
+        background-color: $color-complementario2;
+    }
+    @media screen and (min-width:600px){
+        .campanias{
+            margin-top: 100px;
+            margin-bottom: 475px;
+            justify-items: center;
+            display: grid;
+            grid-template-areas:"info info info"
+                                "listaCampanias listaCampanias listaCampanias"
+                                "listaCampanias listaCampanias listaCampanias"
+                                "listaCampanias listaCampanias listaCampanias";
+        }
+        .mainCampanias{
+            .listaCampanias{
+            grid-area: listaCampanias;
+            display: block;
+            justify-content: center;
+            .campaniaUno{
+                margin: 50px;
+                .descipcionCampania{
+                    margin: 50px;
+                    text-align: center;
+                }
+            }
+            .campaniaDos{
+                margin: 50px;
+                .descipcionCampania{
+                    margin: 50px;
+                    text-align: center;
+                }
+            }
+            .campaniaTres{
+                margin: 50px;
+                .descipcionCampania{
+                    margin: 50px;
+                    text-align: center;
+                }
+            }
+            } 
+        } 
+    
+        
+    }
+    
+    @media screen and (min-width:1024px){
+        .campanias{
+            margin-top: 100px;
+            margin-bottom: 475px;
+            justify-items: center;
+            display: grid;
+            grid-template-areas:"info listaCampanias listaCampanias listaCampanias"
+                                "info listaCampanias listaCampanias listaCampanias"
+                                "info listaCampanias listaCampanias listaCampanias"
+                                "info listaCampanias listaCampanias listaCampanias";
+            
+            } 
+            .mainCampanias{
+                .listaCampanias{
+                    grid-area: listaCampanias;
+                    display: block;
+                }       
+        }
+    
+        
+    }
+}
+
+/*productos*/
+
+.productos{
+    @extend %body;
+    header{
+        @include headers;
+        h1{  
+            @include titulos;
+            }
+    }
+    
+    .row{
+        .navbar{
+            background-color: $color-complementario;
+        }
+        div{
+            .navbar-nav{
+                .nav-item{
+                    .nav-link{
+                        color: white;
+                    }
+                }
+            }
+        }
+    }
+
+    .mainProductos{
+        margin-top: 100px;
+        margin-bottom: 200px;
+        justify-items: center;
+        display: grid;
+        grid-template-areas:"subProductos subProductos"
+                        "pProductos pProductos"
+                        "imagenVela imagenVela"
+                        "imagenSahumerios imagenSahumerios"
+                        "imagenDifusores imagenDifusores"
+                        "imagenOtros imagenOtros";
+        .subProductos{
+                grid-area: subProductos;
+                text-align: center;
+        }
+        .pProductos{
+            margin-left: 70px;
+            margin-right: 70px;
+            grid-area: pProductos;
+            text-align: center;
+            font-size: 1.5rem;
+        }
+        .imagenVela{
+            grid-area: imagenVela;
+        }
+        
+        .imagenVela:hover{
+            transform: translate(20px);
+        }
+        
+        .imagenSahumerios{
+            grid-area: imagenSahumerios;
+        }
+        
+        .imagenSahumerios:hover{
+            transform: translate(20px);
+        }
+        
+        .imagenDifusores{
+            grid-area: imagenDifusores;
+        }
+        
+        .imagenDifusores:hover{
+            transform: translate(20px);
+        }
+        
+        .imagenOtros{
+            grid-area: imagenOtros;
+        }
+        
+        .imagenOtros:hover{
+            transform: translate(20px);
+        }
+    }
+
+    .footerProductos{
+        text-align: center;
+        background-color: $color-complementario2;
+    }
+}
+
+/*nosotros*/
+
+.nosotros{
+    @extend %body;
+    header{
+        @include headers;
+        h1{  
+            @include titulos;
+            }
+    }
+
+    .row{
+        .navbar{
+            background-color:$color-complementario;
+        }
+        div{
+            .navbar-nav{
+                .nav-item{
+                    .nav-link{
+                        color: white;
+                    }
+                }
+            }
+        }
+    }
+
+    .mainNosotros{
+        margin-top: 100px;
+        margin-bottom: 200px;
+        display: grid;
+        grid-template-areas:"tituloSobre tituloSobre"
+                            "video viedeo"
+                            "yTube yTube";
+                        
+    
+    .tituloSobre{
+        grid-area: tituloSobre;
+        text-align: center;
+    }
+    
+    .pNosotros{
+        display: none;
+        font-size: 1.5rem;
+        text-align: center;
+    }
+    
+    .video{
+        grid-area: video;
+    }
+    
+    .yTube{
+        grid-area: yTube;
+        text-align: center;
+    }
+    .sobreNosotros{
+        justify-items: center;
+    }
+    }   
+    
+
+    .footerNosotros{
+        text-align: center;
+        background-color: $color-complementario2;
+    }
+
+    @media screen and (min-width:600px){
+        .mainNosotros{
+            justify-items: center;
+            display: grid;
+            grid-template-areas:"tituloSobre tituloSobre tituloSobre"
+                                "pNosotros pNosotros pNosotros"
+                                "video video video"
+                                "yTube yTube yTube";
+            .sobreNosotros{
+        
+                .tituloSobre{
+                    text-align: center;
+                    grid-area: tituloSobre;
+                }
+    
+                .sobreNosotros{
+                    text-align: center;
+                }
+            }
+            .video{
+                grid-area: video;
+            
+            }
+    
+            .yTube{
+                grid-area: yTube;
+            }
+    
+            .pNosotros{
+                display: block;
+                text-align: center;
+                grid-area: pNosotros;
+            }
+        }
+    
+    }
+    
+    @media screen and (min-width:1024px){
+        .mainNosotros{
+            display: grid;
+            grid-template-areas:"tituloSobre tituloSobre tituloSobre tituloSobre"
+                                "pNosotros pNosotros video video"
+                                "pNosotros pNosotros video video"
+                                "yTube yTube yTube yTube";
+        .sobreNosotros{                       
+        
+            .tituloSobre{
+                text-align: center;
+                grid-area: tituloSobre;
+            }
+    
+            .sobreNosotros{
+                text-align: center;
+            }
+        }
+    
+        .video{
+            grid-area: video;
+            
+        }
+    
+        .yTube{
+            grid-area: yTube;
+        }
+    
+        .pNosotros{
+            display: block;
+            text-align: center;
+            grid-area: pNosotros;
+        }
+}
+}
+}

@@ -1,0 +1,14 @@
+@mixin headers{
+    height: 85px;
+    margin-bottom: 1rem;
+    top: 0;
+    background-color: $color-principal; 
+
+}
+@mixin titulos{
+        text-align: center;
+        color: whitesmoke;
+        font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        text-decoration: underline;
+
+}
