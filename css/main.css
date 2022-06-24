@@ -1,4 +1,4 @@
-@charset "UTF-8";
+
 .home, .campanias, .productos, .nosotros {
   margin-bottom: 100px;
   background-image: linear-gradient(#E5E3C9, #B4CFB0); }
@@ -31,7 +31,8 @@
   margin-bottom: 200px;
   display: grid;
   justify-content: center;
-  grid-template-areas: "tituloMain tituloMain" "parrafo parrafo"; }
+  grid-template-areas: "tituloMain tituloMain"
+ "parrafo parrafo"; }
   .home .mainHome .tituloMain {
     margin-top: 3rem;
     grid-area: tituloMain;
@@ -56,7 +57,9 @@
   .home .mainHome {
     margin-top: 50px;
     margin-bottom: 400px;
-    grid-template-areas: "tituloMain tituloMain tituloMain" "parrafo parrafo parrafo" "imagen imagen imagen";
+    grid-template-areas: "tituloMain tituloMain tituloMain"
+ "parrafo parrafo parrafo"
+ "imagen imagen imagen";
     justify-content: center;
     justify-items: center; }
     .home .mainHome .imagenHome {
@@ -66,7 +69,9 @@
   .home .mainHome {
     margin-top: 50px;
     margin-bottom: 400px;
-    grid-template-areas: "tituloMain tituloMain tituloMain tituloMain" "parrafo parrafo parrafo parrafo" "imagen imagen imagen imagen";
+    grid-template-areas: "tituloMain tituloMain tituloMain tituloMain"
+ "parrafo parrafo parrafo parrafo"
+ "imagen imagen imagen imagen";
     justify-items: center;
     align-items: center; } }
 
@@ -127,7 +132,10 @@
     margin-bottom: 475px;
     justify-items: center;
     display: grid;
-    grid-template-areas: "info info info" "listaCampanias listaCampanias listaCampanias" "listaCampanias listaCampanias listaCampanias" "listaCampanias listaCampanias listaCampanias"; }
+    grid-template-areas: "info info info"
+ "listaCampanias listaCampanias listaCampanias"
+ "listaCampanias listaCampanias listaCampanias"
+ "listaCampanias listaCampanias listaCampanias"; }
   .campanias .mainCampanias .listaCampanias {
     grid-area: listaCampanias;
     display: block;
@@ -154,7 +162,10 @@
     margin-bottom: 475px;
     justify-items: center;
     display: grid;
-    grid-template-areas: "info listaCampanias listaCampanias listaCampanias" "info listaCampanias listaCampanias listaCampanias" "info listaCampanias listaCampanias listaCampanias" "info listaCampanias listaCampanias listaCampanias"; }
+    grid-template-areas: "info listaCampanias listaCampanias listaCampanias"
+ "info listaCampanias listaCampanias listaCampanias"
+ "info listaCampanias listaCampanias listaCampanias"
+ "info listaCampanias listaCampanias listaCampanias"; }
   .campanias .mainCampanias .listaCampanias {
     grid-area: listaCampanias;
     display: block; } }
@@ -182,7 +193,12 @@
   margin-bottom: 200px;
   justify-items: center;
   display: grid;
-  grid-template-areas: "subProductos subProductos" "pProductos pProductos" "imagenVela imagenVela" "imagenSahumerios imagenSahumerios" "imagenDifusores imagenDifusores" "imagenOtros imagenOtros"; }
+  grid-template-areas: "subProductos subProductos"
+ "pProductos pProductos"
+ "imagenVela imagenVela"
+ "imagenSahumerios imagenSahumerios"
+ "imagenDifusores imagenDifusores"
+ "imagenOtros imagenOtros"; }
   .productos .mainProductos .subProductos {
     grid-area: subProductos;
     text-align: center; }
@@ -235,7 +251,9 @@
   margin-top: 100px;
   margin-bottom: 200px;
   display: grid;
-  grid-template-areas: "tituloSobre tituloSobre" "video viedeo" "yTube yTube"; }
+  grid-template-areas: "tituloSobre tituloSobre"
+ "video viedeo"
+ "yTube yTube"; }
   .nosotros .mainNosotros .tituloSobre {
     grid-area: tituloSobre;
     text-align: center; }
@@ -259,7 +277,10 @@
   .nosotros .mainNosotros {
     justify-items: center;
     display: grid;
-    grid-template-areas: "tituloSobre tituloSobre tituloSobre" "pNosotros pNosotros pNosotros" "video video video" "yTube yTube yTube"; }
+    grid-template-areas: "tituloSobre tituloSobre tituloSobre"
+ "pNosotros pNosotros pNosotros"
+ "video video video"
+ "yTube yTube yTube"; }
     .nosotros .mainNosotros .sobreNosotros .tituloSobre {
       text-align: center;
       grid-area: tituloSobre; }
@@ -277,7 +298,10 @@
 @media screen and (min-width: 1024px) {
   .nosotros .mainNosotros {
     display: grid;
-    grid-template-areas: "tituloSobre tituloSobre tituloSobre tituloSobre" "pNosotros pNosotros video video" "pNosotros pNosotros video video" "yTube yTube yTube yTube"; }
+    grid-template-areas: "tituloSobre tituloSobre tituloSobre tituloSobre"
+ "pNosotros pNosotros video video"
+ "pNosotros pNosotros video video"
+ "yTube yTube yTube yTube"; }
     .nosotros .mainNosotros .sobreNosotros .tituloSobre {
       text-align: center;
       grid-area: tituloSobre; }
